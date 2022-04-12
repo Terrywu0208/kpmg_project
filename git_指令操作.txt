@@ -1,0 +1,10 @@
+git clone https://github.com/Terrywu0208/kpmg_project.git
+(這是把專案複製到自己的電腦端，如果有成功抓到專案的話，這個只要做一次就可以)
+
+(每次在進行專案撰寫的時候)
+git pull(更新專案，有可能我或是你有把新的東西放上去)
+
+(撰寫完專案，把檔案上傳到github)
+git add .
+git commit -m "寫一下備註什麼都可以"
+git push

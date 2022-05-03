@@ -1,0 +1,12 @@
+from xbrl import XBRLParser, GAAP, GAAPSerializer
+from bs4 import BeautifulSoup
+from PIL import Image
+import pytesseract
+
+#input the image
+img_name = 'testing image2.jpg'
+img = Image.open(img_name)
+
+#change image to chinese string, lang=chi_tra/eng/chi_sim etc.
+text = pytesseract.image_to_string(img, lang='chi_tra')
+print(text)

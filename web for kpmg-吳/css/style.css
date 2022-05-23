@@ -1,0 +1,30 @@
+.margin_top{
+    margin-top: 20px;
+}
+
+.submit_margin_top{
+    margin-top: 30px;
+}
+
+.card_style{
+    width: 70%; 
+    padding: 15px;
+}
+
+.container_style{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10%;
+}
+
+.bck_img{
+    background-image: url(../img/bonk.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}

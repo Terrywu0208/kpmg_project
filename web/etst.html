@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="addElementDiv()">asdasd</button>
+    <div id="parent"></div>
+</body>
+<script>
+    var asd = document.getElementById("parent");
+    function addElementDiv(){
+        var select_ls=["流動資產","現金及約當現金","應收票據"];
+        var inner="";
+        for(var i=0;i<select_ls.length;i++){
+            inner=inner+'<option value=i>'+select_ls[i]+'</option>';
+        }
+        asd.insertAdjacentHTML('afterbegin',"<select>"+inner+"</select>");
+    }
+</script>
+</html>

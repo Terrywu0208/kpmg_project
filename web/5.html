@@ -438,13 +438,15 @@
 
 <script>
     var asd = document.getElementById("add");
+    var temp = 0
     function add_block(){
         var select_ls=["流動資產","現金及約當現金","應收票據"];
         var inner="";
         for(var i=0;i<select_ls.length;i++){
             inner=inner+'<option value=i>'+select_ls[i]+'</option>';
         }
-        asd.insertAdjacentHTML('afterbegin',"<select>"+inner+"</select>");
+        temp = temp + 1;
+        asd.insertAdjacentHTML('afterbegin',"<select "+"id="+temp+">"+inner+"</select>");
     }
 </script>
 

@@ -1,6 +1,4 @@
 # 資料庫串接
-import MySQLdb
-import pandas as pd
 import re
 import pandas as pd
 
@@ -176,24 +174,15 @@ def main_calculate(df,kind_input):
 
 def connect_mysql(company_id_input,kind_input,year_input,season_input):
     conn = MySQLdb.Connect(host = 'localhost',
-                       port = 3306,
-                       user = 'root',
-                       db = 'kpmg',
-                       charset='utf8')
+                        port = 3306,
+                        user = 'root',
+                        db = 'kpmg',
+                        charset='utf8')
     # 輸入你的資料庫連線資訊
     cur = conn.cursor()
-
-    company_id_input = 2707
-    # kind_input = "Balance_Sheet" #你要查的表
-    # kind_input = "Profit_and_Loss_Account" #你要查的表
-    kind_input = "Cash_Flow_Statement" #你要查的表
-
-
-    year_input = 2019
-    season_input = 4
     cur.execute(f"SELECT `path` FROM `financial_statements` WHERE `company_id` = {company_id_input} AND `kind` = '{kind_input}' AND `year` = {year_input} AND `season` = {season_input} ")
     result_set = cur.fetchall()
-    # result_set
+
     df = pd.read_csv(f"../../{result_set[0][0]}")
     new_df = main_calculate(df,kind_input)
     return new_df

@@ -1,4 +1,4 @@
-git clone https://github.com/Terrywu0208/kpmg_project.git
+git clone (url)
 (這是把專案複製到自己的電腦端，如果有成功抓到專案的話，這個只要做一次就可以)
 
 (每次在進行專案撰寫的時候)
